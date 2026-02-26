@@ -1,0 +1,611 @@
+/* =========================== GLOBAL BROWSER FIX =========================== */
+/* ========== FINAL FONT FORCE FIX ========== */
+
+html, body {
+  font-size: 16px !important;
+}
+
+body, p, li, td, th, div, span {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+/* Headings normalize again at end */
+h1 { font-size: 34px !important; }
+h2 { font-size: 28px !important; }
+h3 { font-size: 20px !important; }
+h4 { font-size: 18px !important; }
+h5 { font-size: 16px !important; }
+
+/* Inner page content force */
+.institute-text p,
+.infrastructure-text p,
+.management-section p,
+.fp-section p,
+.principal-content p,
+.dept-content p,
+.content p {
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+}
+
+
+
+/* Universal container fix */
+.container,
+.main-container,
+.section-box,
+.scholarship-container,
+.infra-container,
+.management-section,
+.fp-section,
+.principal-section {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* All images responsive */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Flex safety */
+.row,
+.boxes,
+.footer-container,
+.vm-container,
+.about-poly-container,
+.container {
+  flex-wrap: wrap;
+}
+
+/* Prevent fixed width breaking mobile */
+@media (max-width: 768px) {
+  .sidebar,
+  .form-card,
+  .principal-image img,
+  .report-card,
+  .box,
+  .footer-box {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .boxes {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  text-size-adjust: 100%;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* TOP BAR */
+.top-bar {
+  background: #0b2a55;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 30px;
+  font-family: Arial, sans-serif;
+  font-size: 20px !important;
+}
+
+/* HEADER */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 25px 50px;
+  background: #ffffff;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+/* LOGO */
+.logo {
+  width: 130px !important;
+  height: auto !important;
+  margin-right: 10px;
+  border: 2px  ; /* test ke liye */
+}
+
+
+/* TEXT BLOCK */
+.title {
+  text-align: left;
+  line-height: 1.1;
+  margin-left: -5px;
+}
+
+/* UPPER SMALL LINE */
+.trust-name {
+  font-family: "Times New Roman", serif !important;
+  font-size: 22px !important;
+  color: orange !important;
+  font-weight: bold !important;
+  margin-bottom: 2px !important;
+  line-height: 1.2 !important;
+}
+
+/* MAIN COLLEGE NAME */
+.title h1 {
+  font-family: "Times New Roman", serif;
+  font-size: 45px !important;   /* 👈 force */
+  color: #0b2a55;
+  font-weight: 1000;
+  margin-bottom: 2px;
+  border: 2px ;        /* test ke liye */
+}
+
+
+/* SUBTITLE */
+.subtitle {
+  font-family: "Times New Roman", serif;
+  font-size: 19px !important;
+  color: #0b2a55;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .title h1 {
+    font-size: 30px;
+  }
+}
+
+/* ================= NOTICE ================= */
+.notice {
+  background: #ffcc00;
+  padding: 6px;
+  font-weight: bold;
+}
+
+/* ================= SLIDER ================= */
+.slider {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.slider img.slide {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.slider img.active {
+  opacity: 1;
+}
+
+/* ================= BOX SECTION ================= */
+.boxes {
+  display: flex;
+  justify-content: space-around;
+  padding: 30px;
+  background: #ffffff;
+}
+
+.box {
+  background: white;
+  width: 30%;
+  padding: 15px;
+  border: 1px solid #ccc;
+}
+
+.box h3 {
+  margin-bottom: 10px;
+  color: #002147;
+}
+
+/* ================= ABOUT SECTION ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.about-polytechnic {
+  background-color: #f4f7fb;
+  padding: 60px 20px;
+}
+
+.about-poly-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* LEFT TEXT */
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 30px;
+  color: #002147;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* RIGHT VIDEO */
+.about-video {
+  flex: 1;
+}
+
+.about-video video {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  border: 3px solid #002147;
+  object-fit: cover;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-poly-container {
+    flex-direction: column;
+  }
+
+  .about-video video {
+    height: 600px;
+  }
+
+  .about-text h2 {
+    text-align: center;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #002147;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ================= ADMISSION FORM ================= */
+.form-input {
+  width: 300px;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+/* ================= BUTTON ================= */
+button {
+  padding: 10px 20px;
+  background: #003366;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0055aa;
+}
+
+body {
+  background-color: #ffffff !important;
+}
+
+/* REMOVE GREEN BACKGROUND FROM SECTIONS */
+.about,
+.about-section,
+.main-section,
+.section,
+.container {
+  background-color: #ffffff !important;
+}
+
+/* FOOTER */
+.footer {
+  background: #0b1d3a;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  position: relative;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+  flex-wrap: wrap;
+}
+
+.footer-box {
+  width: 23%;
+}
+
+.footer-box h3 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  border-bottom: 2px solid #ff7a18;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.footer-box p,
+.footer-box li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #dcdcdc;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-box ul li a {
+  color: #dcdcdc;
+  text-decoration: none;
+}
+
+.footer-box ul li a:hover {
+  color: #ff7a18;
+}
+
+/* Opening Hours */
+.opening-hours {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 60px;
+  border-top: 1px solid #1f2f52;
+  font-size: 14px;
+}
+
+.opening-hours span {
+  float: right;
+}
+
+.closed {
+  color: red;
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  padding: 15px;
+  background: #08162f;
+  font-size: 14px;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 900px) {
+  .footer-box {
+    width: 48%;
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-box {
+    width: 100%;
+  }
+
+  .opening-hours {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+/* principal */
+ 
+
+.principal-section {
+    max-width: 900px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    text-align: left;
+}
+
+.principal-section h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.underline {
+    width: 90px;
+    height: 3px;
+    background-color: orange;
+    margin: 0 auto 25px;
+}
+
+/* Image */
+.principal-image img {
+    width: 200px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+
+/* Name */
+.principal-name {
+    color: rgb(10, 28, 128);
+    margin-bottom: 10px;
+}
+
+/* Content */
+.principal-content {
+    text-align: justify;
+}
+
+.principal-content p {
+    line-height: 1.3;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+
+/*toper student*/
+
+
+/* Section */
+.testimonial-section {
+    background: #f47c42;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.testimonial-section h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.underline {
+    width: 80px;
+    height: 3px;
+    background: #fff;
+    margin: 0 auto 40px;
+}
+
+/* Slider */
+.testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.testimonial-track {
+    display: flex;
+    gap: 30px;
+    animation: slide 18s infinite linear;
+}
+
+/* Card */
+.testimonial-card {
+    background: #fff;
+    width: 320px;
+    padding: 40px 25px 25px;
+    border-radius: 6px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.student-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 3px solid #fff;
+}
+
+.testimonial-card h3 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.testimonial-card span {
+    font-size: 13px;
+    color: gray;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-top: 12px;
+    color: #444;
+}
+
+/* Animation */
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-60%); }
+}
+ /* gallary */
+
+.gallery-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.gallery-btn {
+  margin-top: 25px;
+}
+
+.more-btn {
+  padding: 10px 30px;
+  background: #0077b6;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+.more-btn:hover {
+  background: #023e8a;
+}
