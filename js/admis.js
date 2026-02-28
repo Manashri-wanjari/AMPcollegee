@@ -1,18 +1,24 @@
-// Initialize EmailJS
 (function(){
-    emailjs.init("lA1VCgRw0n33pZU9e");  // Replace with your Public Key
+   emailjs.init("EPN61X_fW6SXltKlJ");
 })();
 
 document.getElementById("admissionForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+   event.preventDefault();
 
-    emailjs.sendForm("service_34hlesj", "template_7c84ci6", this)
-    .then(() => {
-        alert("Application Submitted Successfully ✅");
-        this.reset();
-    })
-    .catch((error) => {
-        alert("Failed to send ❌ Please try again.");
-        console.log("EmailJS Error:", error);
-    });
+   emailjs.send("service_ardzunl","template_12xfnmk",{
+      full_name: document.getElementById("fullName").value,
+      dob: document.getElementById("dob").value,
+      gender: document.getElementById("gender").value,
+      email: document.getElementById("email").value,
+      mobile: document.getElementById("mobile").value,
+      percentage: document.getElementById("percentage").value,
+      course: document.getElementById("course").value,
+      address: document.getElementById("address").value
+   })
+   .then(function() {
+      alert("Form Submitted Successfully ✅");
+   }, function(error) {
+      alert("Failed ❌");
+      console.log(error);
+   });
 });
